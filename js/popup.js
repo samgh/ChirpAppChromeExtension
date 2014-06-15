@@ -1,5 +1,5 @@
 $(function() {
-	$('#button').click(function() {
+	$('#chirp-button').click(function() {
 		url = 'http://chirpappapi-env-kxv8gngpvg.elasticbeanstalk.com/chirpapp/api/v1.0/' 
 			+ encodeURIComponent($('#tweet').val());
 		$.ajax({
@@ -11,4 +11,9 @@ $(function() {
 	      	}
 	    });
 	});
+	$('#tweet-button').click(function() {
+		var newURL = "https://twitter.com/intent/tweet?text=" + encodeURIComponent($('#tweet').val());
+  		chrome.tabs.create({ url: newURL });
+	})
 });
+
