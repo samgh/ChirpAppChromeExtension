@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "Chirp App",
+  "description": "This extension shortens your tweets.",
+  "version": "1.0",
+
+  "permissions": [
+    "http://ChirpAppAPI-env-kxv8gngpvg.elasticbeanstalk.com/*"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
