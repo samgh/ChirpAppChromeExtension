@@ -9,11 +9,12 @@ function copyTextToClipboard(text) {
 
 $(function() {
 	$('#chirp-button').click(function() {
-		url = 'http://chirpappapi-env-kxv8gngpvg.elasticbeanstalk.com/chirpapp/api/v1.0/' 
-			+ encodeURIComponent($('#tweet').val());
 		$.ajax({
-		    type: 'GET',
-    		url: url,
+		    type: 'POST',
+    		url: 'http://chirpappapi-env-kxv8gngpvg.elasticbeanstalk.com/chirpapp/api/v1.0/tweet',
+    		data: JSON.stringify({"tweet" : $('#tweet').val()}),
+    		contentType: 'application/json; charset=utf-8',
+    		dataType: 'json',
 			success: function(result){
 				console.log(result.tweet);
 		      	$("#tweet").val(result.tweet);
