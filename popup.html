@@ -6,20 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Chirp App</title>
     <link href="css/popup.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <div id="content">
+    <header>
       <div id="icon-container">
-        <img id="icon" src="img/chirp_app_icon.png" />
+        <img id="icon" src="img/chirp_app_icon.png" alt="Chirp App logo" />
+        <div id="icon-text" class="header-text">Chirp App</div>
       </div>
-      <div id="tweet-container">
-        <textarea id="tweet" rows="3" placeholder="Trying out @tryChirpApp and it rocks!"></textarea>
+      <div id="character-count" class="header-text">0/140</div>
+      <div id="tweet-button" class="header-text">TWEET</div>
+      <div id="dropdown">
+        <img src="img/dropdown.png" alt="dropdown icon" />
       </div>
-      <div id="button-container">
-        <button id="chirp-button">Chirp!</button>
-        <button id="tweet-button" >Tweet</button>
-        <button id="copy-button" >Copy to clipboard</button>
+    </header>
+    <div id="content">
+      <textarea id="tweet" rows="3" placeholder="Trying out @tryChirpApp and it rocks!"></textarea>
+    </div>
+    <footer>
+      <div id="shorten-button" class="footer-button">
+        <div id="shorten-image" class="footer-image"></div>
       </div>
+      <div id="link-button" class="footer-button">
+        <div id="link-image" class="footer-image"></div>
+      </div>
+      <div id="hashtag-button" class="footer-button">
+        <div id="hashtag-image" class="footer-image"></div>
+      </div>
+      <div id="mention-button" class="footer-button">
+        <div id="mention-image" class="footer-image"></div>
+      </div>
+    </footer>
+    <img src="/img/spinner.gif" id="spinner" />
     <script src="js/jquery.min.js"></script>
     <script src="js/popup.js"></script>
   </body>
